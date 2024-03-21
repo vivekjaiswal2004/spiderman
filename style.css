@@ -1,0 +1,111 @@
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #1fb62e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #333; /* Added border for cell separation */
+}
+
+.x::after{
+   content: ''; /* Clear any existing content */
+    display: block;
+    width: 80px; /* Adjust width and height as needed */
+    height: 80px;
+    background-image: url(https://i.pinimg.com/736x/17/97/49/1797498957488fbcfac798a431ffb52b.jpg); /* Path to your logo image */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.o::after {
+    content: ''; /* Clear any existing content */
+    display: block;
+    width: 80px; /* Adjust width and height as needed */
+    height: 80px;
+    background-image: url(https://i.pinimg.com/736x/f4/1d/00/f41d00958faee01d2573fb70c1c7e0f5.jpg); /* Path to your logo image */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1464c;
+}
+
+.container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.status {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.restart-button:hover {
+    background-color: #45a049;
+}
+/* CSS styles for hover effects */
+.cell:hover {
+    background-color: #6fc5ef; /* Light green color on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Highlight winning combination */
+.win-highlight {
+    background-color: #0db895; /* Yellow background for winning cells */
+    transition: background-color 0.5s ease; /* Smooth transition */
+}
+
+/* CSS styles for restart button */
+.restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4f3a9b; /* Red color for button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.restart-button:hover {
+    background-color: #fbfb23; /* Darker red on hover */
+}
